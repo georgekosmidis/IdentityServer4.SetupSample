@@ -58,7 +58,8 @@ namespace IdentityServerTest.ConsoleApp
                     Console.WriteLine();
                     Console.WriteLine("SUCCESS!!");
                     Console.WriteLine();
-                    Console.WriteLine("Access Token: " + identityServerResponse.AccessToken);
+                    Console.WriteLine("Access Token: ");
+                    Console.WriteLine(identityServerResponse.AccessToken);
 
                     //Call the API with the correct access token
                     httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", identityServerResponse.AccessToken);
