@@ -26,7 +26,7 @@ namespace IdentityServer
             {
                 new ApiResource("ApiName")
                 {
-                    ApiSecrets = {new Secret("secret_for_the_api".Sha256())}
+                    ApiSecrets = {new Secret("secret_for_the_api".Sha256())}                    
                 }
             };
         }
@@ -42,6 +42,10 @@ namespace IdentityServer
                     AccessTokenType = AccessTokenType.Reference,
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     AllowedScopes = { "ApiName" },
+                    //Claims =
+                    //{
+                    //    new Claim(JwtClaimTypes.WebSite, "...")
+                    //}
                 }
             };
         }
@@ -54,7 +58,7 @@ namespace IdentityServer
                 {
                     SubjectId = "1",
                     Username = "demo",
-                    Password = "demo".Sha256(),
+                    Password = "demo".Sha256(),                    
                     //Claims =
                     //{
                     //    new Claim(JwtClaimTypes.Role, "SomeRole")
