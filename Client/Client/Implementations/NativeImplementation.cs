@@ -25,7 +25,10 @@ namespace IdentityServerTest.ConsoleApp.Implementations
                 var identityServerResponse = await httpClient.RequestPasswordTokenAsync(new PasswordTokenRequest
                 {
                     Address = "http://localhost:5000/connect/token",
-                    GrantType = "password",
+
+                    // @Doc-Saintly, 2020-06-28: I think this line is unnecessary because RequestPasswordTokenAsync should automatically set the grant type
+                    // Issue: https://github.com/georgekosmidis/IdentityServer4.SetupSample/issues/1
+                    // GrantType = "password",
 
                     ClientId = "ConsoleApp_ClientId",
                     ClientSecret = "secret_for_the_consoleapp",
