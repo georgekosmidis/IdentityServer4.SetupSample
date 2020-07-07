@@ -35,7 +35,7 @@ namespace IdentityServerTest.ConsoleApp.Implementations
                     Scope = "ApiName",
 
                     UserName = username,
-                    Password = password.ToSha256()
+                    Password = password
                 });
 
                 //all good?

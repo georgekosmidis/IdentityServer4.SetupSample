@@ -58,7 +58,7 @@ namespace IdentityServer
                 {
                     SubjectId = "1",
                     Username = "demo",
-                    Password = "demo".Sha256(),                    
+                    Password = "demo",                    
                     //Claims =
                     //{
                     //    new Claim(JwtClaimTypes.Role, "SomeRole")
