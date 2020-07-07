@@ -35,7 +35,7 @@ namespace IdentityServerTest.ConsoleApp.Implementations
                     Scope = "ApiName",
 
                     UserName = username,
-                    Password = password
+                    Password = password //.Sha265() removed because it was confusing withouth adding any value, https://github.com/georgekosmidis/IdentityServer4.SetupSample/issues/1
                 });
 
                 //all good?

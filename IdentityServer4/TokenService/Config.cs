@@ -58,7 +58,7 @@ namespace IdentityServer
                 {
                     SubjectId = "1",
                     Username = "demo",
-                    Password = "demo",                    
+                    Password = "demo", //.Sha265() removed because it was confusing withouth adding any value, https://github.com/georgekosmidis/IdentityServer4.SetupSample/issues/1
                     //Claims =
                     //{
                     //    new Claim(JwtClaimTypes.Role, "SomeRole")
